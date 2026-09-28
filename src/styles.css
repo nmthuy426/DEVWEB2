@@ -1,0 +1,26 @@
+:root {
+  color-scheme: light;
+  --ink: #202d29;
+  --muted: #74817b;
+  --line: #e2e7e1;
+  --surface: #fff;
+  --canvas: #f3f5f1;
+  --green: #286c59;
+  --green-soft: #e7f0eb;
+  --gold: #b68442;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(ellipse at 85% 0%, #e6eee6 0, transparent 38%), var(--canvas);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; }
+button:focus-visible { outline: 3px solid #b6844266; outline-offset: 3px; }
