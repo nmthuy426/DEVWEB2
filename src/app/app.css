@@ -1,1 +1,108 @@
-:host { display: block; min-height: 100vh; }
+:host {
+	display: block;
+	min-height: 100vh;
+}
+
+.site-header {
+	border-bottom: 1px solid #dce5dd;
+	background: rgb(255 255 255 / 92%);
+}
+
+.header-inner {
+	display: flex;
+	width: min(1120px, calc(100% - 40px));
+	min-height: 76px;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.brand {
+	display: inline-flex;
+	min-width: max-content;
+	align-items: center;
+	gap: 11px;
+	color: #202d29;
+	text-decoration: none;
+}
+
+.brand-mark {
+	display: grid;
+	width: 36px;
+	height: 36px;
+	place-items: center;
+	border-radius: 9px;
+	background: #286c59;
+	color: #fff;
+	font-family: Georgia, serif;
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.brand-name {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.brand-name span {
+	color: #74817b;
+	font-weight: 500;
+}
+
+.exercise-nav {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.exercise-nav a {
+	display: inline-flex;
+	min-height: 42px;
+	align-items: center;
+	gap: 9px;
+	padding: 0 14px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	color: #52615a;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+
+.exercise-nav a:hover {
+	border-color: #dce5dd;
+	background: #f5f8f5;
+	color: #202d29;
+}
+
+.exercise-nav a.is-active {
+	border-color: #d5e5dc;
+	background: #e7f0eb;
+	color: #205b49;
+}
+
+@media (max-width: 560px) {
+	.header-inner {
+		width: min(100% - 24px, 1120px);
+		min-height: 68px;
+		gap: 12px;
+	}
+
+	.brand-name span {
+		display: none;
+	}
+
+	.exercise-nav {
+		gap: 2px;
+	}
+
+	.exercise-nav a {
+		min-height: 38px;
+		gap: 6px;
+		padding: 0 8px;
+		font-size: 12px;
+	}
+
+}

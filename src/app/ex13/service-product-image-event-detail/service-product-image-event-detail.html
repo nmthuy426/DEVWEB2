@@ -1,0 +1,20 @@
+<header class="page-heading">
+  <p class="eyebrow">Exercise 13 / Product detail</p>
+  <h1>{{ selectedProduct?.ProductName ?? 'Product not found' }}</h1>
+  <p>Product information from the service data.</p>
+</header>
+
+<button type="button" (click)="goBack()">Go Back</button>
+
+@if (selectedProduct; as product) {
+  <table class="event-detail-table">
+    <tbody>
+      <tr><th scope="row">ID</th><td>{{ product.ProductId }}</td></tr>
+      <tr><th scope="row">Name</th><td>{{ product.ProductName }}</td></tr>
+      <tr><th scope="row">Price</th><td>{{ product.Price }}</td></tr>
+      <tr><td colspan="2"><img class="event-detail-image" [src]="product.Image" [alt]="product.ProductName"></td></tr>
+    </tbody>
+  </table>
+} @else {
+  <p role="status">No product matches this ID.</p>
+}

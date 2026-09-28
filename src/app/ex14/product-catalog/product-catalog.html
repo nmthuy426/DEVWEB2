@@ -1,0 +1,28 @@
+<section class="catalog-wrap">
+  <h2>Product Catalog</h2>
+
+  <div *ngFor="let category of categories; trackBy: trackCategory">
+    <h3 class="category-title">{{ category.CateName }}</h3>
+
+    <table border="1" class="catalog-table">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>UnitPrice</th>
+          <th>Picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of category.Products; trackBy: trackProduct">
+          <td>{{ product.ProductId }}</td>
+          <td>{{ product.ProductName }}</td>
+          <td>{{ product.Price }}</td>
+          <td>
+            <img [src]="product.Image" [alt]="product.ProductName" width="100" height="100" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,1 +1,22 @@
-<app-customer-group></app-customer-group>
+<header class="site-header">
+	<div class="header-inner">
+		<div class="brand">
+			<span class="brand-mark" aria-hidden="true">A</span>
+			<span class="brand-name">Exercises</span>
+		</div>
+
+		<nav class="exercise-nav" aria-label="Exercises">
+			<a routerLink="/ex14" routerLinkActive="is-active" ariaCurrentWhenActive="page">
+				Exercise 14
+			</a>
+			<a routerLink="/service-product-image-event" routerLinkActive="is-active" ariaCurrentWhenActive="page">
+				Exercise 13
+			</a>
+			<a routerLink="/ex18" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">
+				Exercise 18
+			</a>
+		</nav>
+	</div>
+</header>
+
+<router-outlet />
